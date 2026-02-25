@@ -16,10 +16,12 @@ programa {
         meses = anos * 12
         prestacao = Valordacasa / meses
 
-        se ( prestacao > (Salario * 0.3) ) entao
-            escreva("Empréstimo não aprovado.")
-        se ( prestacao <= (Salario * 0.3) ) entao
-            escreva("Empréstimo aprovado.")
+        se ( prestacao > Salario * 0.3) {
+            escreva("Empréstimo aprovado. \n")
+        } senao {
+            escreva("Empréstimo não aprovado. \n")
+        }
+            escreva("\n A prestação a ser paga é: ", prestacao)
 
     }
 }
