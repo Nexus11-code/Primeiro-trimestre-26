@@ -1,24 +1,17 @@
-aluno = {}
+#Soma
 
-# Solicitando os dados
-aluno["nome"] = input("Digite o nome do aluno: ")
-aluno["nota1"] = float(input("Digite a nota da Prova 1: "))
-aluno["nota2"] = float(input("Digite a nota da Prova 2: "))
+def SomaDeNumeros(nuemero1, numero2):
+    soma = numero1 + numero2
+    produto = numero1 * numero2
 
-media = (aluno["nota1"] + aluno["nota2"]) / 2
+    print("Soma: ", soma)
+    print("resultado: ", produto)
 
-# Adicionando a média ao dicionário
-aluno["media"] = media
+#Calcular Salario
 
-if media >= 7:
-    situacao = "Aprovado"
-elif media >= 5:
-    situacao = "Recuperação"
-else:
-    situacao = "Reprovado"
+def calcularsalario(ValorHora, HoraTrabalhada):
+    SalarioTotal= ValorHora * HoraTrabalhada
+    return SalarioTotal
 
-print("\nDados do aluno:")
-for chave, valor in aluno.items():
-    print(f"{chave}: {valor}")
-
-print("Situação:", situacao)
+total = calcularsalario(60, 120)
+print("Salario total: ", total)
